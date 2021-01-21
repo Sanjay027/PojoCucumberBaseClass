@@ -1,0 +1,9 @@
+package com.runner;
+
+import org.junit.runner.RunWith;
+
+@RunWith(cucumber.class)
+
+public class AdacatinTestRunner {
+
+}

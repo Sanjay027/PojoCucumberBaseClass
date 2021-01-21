@@ -1,0 +1,16 @@
+package org.pom;
+
+import com.base.BaseClass;
+
+public class PomClass3  extends BaseClass{
+
+	
+	public PomClass3() {
+		
+	
+		
+		
+		
+	}
+	
+}

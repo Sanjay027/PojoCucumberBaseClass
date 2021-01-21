@@ -1,0 +1,10 @@
+Feature: verify the facebook details
+
+
+
+Scenario: verifying facebook login with valid credentials
+
+Given user is on the adactin page
+When  user should enter username and password
+And   user should click the login button
+And  user should enter the valid data

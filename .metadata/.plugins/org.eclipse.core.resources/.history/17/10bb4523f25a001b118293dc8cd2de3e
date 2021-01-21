@@ -1,0 +1,99 @@
+package com.stepdefinitionfile;
+
+import java.sql.Driver;
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.Select;
+
+import cucumber.api.java.en.Given;
+import cucumber.api.java.en.When;
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class AdacatinStepdefinition {
+
+	WebDriver driver;
+	
+	@Given("user is on adactin logi page")
+	public void user_is_on_adactin_logi_page() {
+	   WebDriverManager.chromedriver().setup();
+	   driver = new ChromeDriver();
+	   driver.get("https://adactinhotelapp.com/");
+	   driver.manage().window().maximize();
+	   driver.manage().timeouts().implicitlyWait(2000, TimeUnit.MILLISECONDS);
+	   
+	}
+
+	@When("user enters the valids {string} and {string}")
+	public void user_enters_the_valids_and(String string1, String string2) {
+	   driver.findElement(By.id("username")).sendKeys(string1);
+	   driver.findElement(By.id("password")).sendKeys(string2);
+	   driver.findElement(By.id("login")).click();
+		
+	}
+      
+	@When("user enter  valids {string} {string} {string} {string} {string} {string} {string} {string}")
+	public void user_enter_valids(String string, String string2, String string3, String string4, String string5, String string6, String string7, String string8) {
+	  
+		
+		WebElement LOCATION = driver.findElement(By.id("location"));
+	     Select s = new Select(LOCATION);
+	     s.selectByVisibleText(string);
+	     
+	     WebElement hotel = driver.findElement(By.id("hotels"));
+	     Select s2 = new  Select(hotel);
+	     s2.selectByVisibleText(string2);
+	     
+	     WebElement roomtype = driver.findElement(By.id("room_type"));
+		Select s3 = new Select(roomtype);
+		s3.selectByVisibleText(string3);
+		
+		WebElement noofroom = driver.findElement(By.id("room_nos"));
+		Select s4 = new  Select(noofroom);
+		s4.selectByVisibleText(string4);
+		
+		WebElement checkin = driver.findElement(By.id("datepick_in"));
+		Select s5 = new Select(checkin);
+		s5.selectByVisibleText(string5);
+		
+		WebElement checkout = driver.findElement(By.id("datepick_out"));
+		Select s6 = new Select(checkout);
+		s6.selectByVisibleText(string6);
+		
+		WebElement adult = driver.findElement(By.id("adult_room"));
+				Select s7 = new Select(adult);
+				s7.selectByVisibleText(string7);
+				
+		WebElement child = driver.findElement(By.id("child_room"));
+			Select s8 = new Select(child);
+			s8.selectByVisibleText(string8);
+				
+				
+				
+	}
+	
+		
+		
+	
+
+	@When("user click the select hotels")
+	public void user_click_the_select_hotels() {
+	   
+	}
+
+	@When("user click the scearch buttons")
+	public void user_click_the_scearch_buttons() {
+	 
+	}
+
+	@When("user enter THE valids {string} {string} {string} {string} {string} {string} {string} {string}")
+	public void user_enter_THE_valids(String string, String string2, String string3, String string4, String string5, String string6, String string7, String string8) {
+	   
+	}
+
+
+	
+}

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="TestRunner (2)" project="PojoCucumberBaseClass" tests="1" started="1" failures="0" errors="0" ignored="0">
+  <testsuite name="Com.test.TestRunner" time="0.002">
+    <testsuite name="Feature: verify the adactin login details" time="0.002">
+      <testcase name="verify the adactin loginwith valid credentiles" classname="verify the adactin login details" time="0.002">
+        <skipped>cucumber.runtime.junit.UndefinedThrowable: The step "user is on adactin logi page" is undefined&#13;
+&#13;
+cucumber.runtime.junit.UndefinedThrowable: The step "user enters the valids "praveen05" and "praveen@05"" is undefined&#13;
+&#13;
+cucumber.runtime.junit.UndefinedThrowable: The step "user enter  valids "London" "Hotel Sunshine" "Standard" "7 - Seven" "20/01/2021" "27/01/2021" "3 - Three" "3 - Three"" is undefined&#13;
+&#13;
+cucumber.runtime.junit.UndefinedThrowable: The step "user click the select hotels" is undefined&#13;
+&#13;
+cucumber.runtime.junit.UndefinedThrowable: The step "user click the scearch buttons" is undefined&#13;
+&#13;
+cucumber.runtime.junit.UndefinedThrowable: The step "user enter THE valids "&lt; firstname &gt;" "vinod" "Annagar" "1212121212123414" "American Express" "April" "2021" "1227"" is undefined&#13;
+&#13;
+cucumber.runtime.junit.UndefinedThrowable: The step "user click the scearch buttons" is undefined&#13;
+&#13;
+</skipped>
+      </testcase>
+    </testsuite>
+  </testsuite>
+</testrun>

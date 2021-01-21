@@ -1,0 +1,46 @@
+package Com.StepDefinition;
+
+import cucumber.api.java.en.Given;
+import cucumber.api.java.en.When;
+
+public class Stepdefinition {
+
+	@Given("user is on adactin logi page")
+	public void user_is_on_adactin_logi_page() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new cucumber.api.PendingException();
+	}
+
+	@When("user enters the valids {string} and {string}")
+	public void user_enters_the_valids_and(String string, String string2) {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new cucumber.api.PendingException();
+	}
+
+	@When("user enter  valids {string} {string} {string} {string} {string} {string} {string} {string}")
+	public void user_enter_valids(String string, String string2, String string3, String string4, String string5, String string6, String string7, String string8) {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new cucumber.api.PendingException();
+	}
+
+	@When("user click the select hotels")
+	public void user_click_the_select_hotels() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new cucumber.api.PendingException();
+	}
+
+	@When("user click the scearch buttons")
+	public void user_click_the_scearch_buttons() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new cucumber.api.PendingException();
+	}
+
+	@When("user enter THE valids {string} {string} {string} {string} {string} {string} {string} {string}")
+	public void user_enter_THE_valids(String string, String string2, String string3, String string4, String string5, String string6, String string7, String string8) {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new cucumber.api.PendingException();
+	}
+
+
+	
+}

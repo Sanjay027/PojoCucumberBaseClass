@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="TestRunner (2)" project="PojoCucumberBaseClass" tests="1" started="1" failures="0" errors="2" ignored="0">
+  <testsuite name="Com.test.TestRunner" time="10.37">
+    <testsuite name="Feature: verify the adactin login details" time="10.37">
+      <testcase name="verify the adactin loginwith valid credentiles" classname="verify the adactin login details" time="10.37">
+        <error>java.lang.NoClassDefFoundError: com/base/BaseClass (wrong name: Com/Base/BaseClass)&#13;
+	at java.lang.ClassLoader.defineClass1(Native Method)&#13;
+	at java.lang.ClassLoader.defineClass(Unknown Source)&#13;
+	at java.security.SecureClassLoader.defineClass(Unknown Source)&#13;
+	at java.net.URLClassLoader.defineClass(Unknown Source)&#13;
+	at java.net.URLClassLoader.access$100(Unknown Source)&#13;
+	at java.net.URLClassLoader$1.run(Unknown Source)&#13;
+	at java.net.URLClassLoader$1.run(Unknown Source)&#13;
+	at java.security.AccessController.doPrivileged(Native Method)&#13;
+	at java.net.URLClassLoader.findClass(Unknown Source)&#13;
+	at java.lang.ClassLoader.loadClass(Unknown Source)&#13;
+	at sun.misc.Launcher$AppClassLoader.loadClass(Unknown Source)&#13;
+	at java.lang.ClassLoader.loadClass(Unknown Source)&#13;
+	at java.lang.ClassLoader.defineClass1(Native Method)&#13;
+	at java.lang.ClassLoader.defineClass(Unknown Source)&#13;
+	at java.security.SecureClassLoader.defineClass(Unknown Source)&#13;
+	at java.net.URLClassLoader.defineClass(Unknown Source)&#13;
+	at java.net.URLClassLoader.access$100(Unknown Source)&#13;
+	at java.net.URLClassLoader$1.run(Unknown Source)&#13;
+	at java.net.URLClassLoader$1.run(Unknown Source)&#13;
+	at java.security.AccessController.doPrivileged(Native Method)&#13;
+	at java.net.URLClassLoader.findClass(Unknown Source)&#13;
+	at java.lang.ClassLoader.loadClass(Unknown Source)&#13;
+	at sun.misc.Launcher$AppClassLoader.loadClass(Unknown Source)&#13;
+	at java.lang.ClassLoader.loadClass(Unknown Source)&#13;
+	at Com.StepDefinition.Stepdefinition.user_enters_the_valids_and(Stepdefinition.java:24)&#13;
+	at ✽.user enters the valids "praveen05" and "praveen@05"(src/test/resources/Adacatin/Adacatin.feature:5)&#13;
+&#13;
+cucumber.runtime.junit.UndefinedThrowable: The step "user click the select hotels" is undefined&#13;
+&#13;
+</error>
+      </testcase>
+    </testsuite>
+  </testsuite>
+</testrun>

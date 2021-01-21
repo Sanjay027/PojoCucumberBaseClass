@@ -1,0 +1,58 @@
+package com.stepdefinitionfile;
+
+import java.sql.Driver;
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import cucumber.api.java.en.Given;
+import cucumber.api.java.en.Then;
+import cucumber.api.java.en.When;
+
+public class loginPageSteps {
+
+	WebDriver driver;
+
+	@Given("user is on the adactin page")
+	public void user_is_on_the_adactin_page() {
+		System.setProperty("webdriver.chrome.driver",
+				"C:\\Users\\G Sree Mamatha\\eclipse-workspace\\cucumber\\SampleCucumber\\Driver\\chromedriver.exe");
+		driver = new ChromeDriver();
+		driver.manage().window().maximize();
+		driver.manage().timeouts().implicitlyWait(10000, TimeUnit.MILLISECONDS);
+		driver.get("http://adactinhotelapp.com/");
+
+	}
+
+	@When("user should enter username and password")
+	public void user_should_enter_username_and_password() throws InterruptedException {
+     driver.findElement(By.id("username")).sendKeys("praveen05");
+     driver.findElement(By.id("password")).sendKeys("praveen@05");
+     driver.findElement(By.id("login")).click();
+     Thread.sleep(2000);
+     WebElement location = driver.findElement(By.id("location"));
+     String text = location.getAttribute("London");
+     System.out.println(text);
+		
+		
+	}
+
+	@When("user should click the login button")
+	public void user_should_click_the_login_button() {
+
+	}
+
+	@When("user should enter the valid data")
+	public void user_should_enter_the_valid_data() {
+
+	}
+
+	@Then("user should verify the success meg")
+	public void user_should_verify_the_success_meg() {
+
+	}
+
+}

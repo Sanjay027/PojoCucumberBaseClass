@@ -1,0 +1,15 @@
+package org.pom;
+
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+
+public class PomClass {
+
+public static void main(String[] args) {
+	
+	@FindBy (id="username")
+	private WebElement username;
+	
+}
+
+}

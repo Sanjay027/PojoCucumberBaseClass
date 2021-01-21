@@ -1,0 +1,14 @@
+Feature: verify the adactin login details
+
+  Scenario Outline: verify the facebook loginwith valid credentiles
+    Given user is on face book logi page
+    When user enters the valid "<username>" and "<password>"
+    And user enter  valid "<location>""<hotel>" "<roomtype>" "<noofrooms>" "< checkindate>" "< checkoutdate>" "< adultperroom>" and  "< childperroom>"
+    And user click the select hotel
+    And user click the scearch button
+    And user enter THE valid "< firstname >" "<lastname>" "<buildingadress>" "<creditcard>" "<creditcardtype>" "<month>" "<year>" and "<cvv>"
+    And user click the scearch button
+
+    Examples: 
+      | username  | password   | location | hotel          | roomtype    | noofrooms | checkindate | checkoutdate | adultperroom | childperroom | firstname | lastname | buildingadress | creditcard      | creditcardtype   | month | year | cvv |
+      | praveen05 | praveen@05 | london   | Hotel sunshine | Super Delux | 1-one     | 20/12/2020  | 22/12/2020   | 2-Two        | 1-One        | Ragu      | selvaraj | Annagar        | 1212 1212 12123 | American Express |  2022 |  123 |     |

@@ -1,0 +1,82 @@
+package com.stepdefinitionfile;
+
+import java.sql.Driver;
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.Alert;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+
+import cucumber.api.java.en.Given;
+import cucumber.api.java.en.Then;
+import cucumber.api.java.en.When;
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class BlazeloginStepdeinition {
+
+	
+	WebDriver driver;
+	
+	
+	
+	
+	@Given("user is on the BlazeDemo page")
+	public void user_is_on_the_BlazeDemo_page() {
+	  WebDriverManager.chromedriver().setup();
+	  
+	  driver.manage().window().maximize();
+	
+	  driver.get("https://www.demoblaze.com/index.html");
+	  driver.manage().timeouts().implicitlyWait(2000,TimeUnit.MILLISECONDS);
+
+		
+	}
+
+	@When("user should enter username and passwords")
+	public void user_should_enter_username_and_passwords() {
+	
+		driver.findElement(By.id("login2")).click();
+		driver.findElement(By.id("loginusername")).sendKeys("Sanjay027");
+		driver.findElement(By.id("loginusername")).sendKeys("Sanjay@027");
+		driver.findElement(By.className("btn btn-primary")).click();
+		
+		
+	}
+
+	@When("user should click the login button")
+	public void user_should_click_the_login_button() {
+	  driver.findElement(By.xpath("(//a[@class='hrefch'])[1]")).click();
+	  driver.findElement(By.xpath("//a[@class='btn btn-success btn-lg']")).click();
+	  driver.switchTo().alert().accept();
+	  driver.findElement(By.id("//button[@class='btn btn-success']")).click();
+	  
+	}
+
+
+	@When("user should enter the valid data")
+	public void user_should_enter_the_valid_data() {
+	
+		driver.findElement(By.id("name")).sendKeys("sanjay");
+		driver.findElement(By.id("country")).sendKeys("india");
+		driver.findElement(By.id("city")).sendKeys("chenai");
+		driver.findElement(By.id("card")).sendKeys("12345678912345678");
+		driver.findElement(By.id("month")).sendKeys("August");
+		driver.findElement(By.id("year")).sendKeys("2022");
+		driver.findElement(By.className("btn btn-primary")).click();
+		
+		
+	}
+
+	@Then("user should verify the success meg")
+	public void user_should_verify_the_success_meg() {
+	driver.findElement(By.id("lead text-muted ")).getAttribute("value");
+	
+	driver.close();
+		
+		
+	}
+
+
+
+	
+}

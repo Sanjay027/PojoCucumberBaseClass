@@ -1,0 +1,94 @@
+package com.stepdefinitionfile;
+
+import java.sql.Driver;
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.Alert;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import cucumber.api.java.en.Given;
+import cucumber.api.java.en.Then;
+import cucumber.api.java.en.When;
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class BlazeloginStepdeinition {
+
+	
+	WebDriver driver;
+	
+	
+	
+	
+	@Given("user is on the BlazeDemo pages")
+	public void user_is_on_the_BlazeDemo_pages() {
+	  WebDriverManager.chromedriver().setup();
+	  driver = new ChromeDriver();
+	  driver.manage().window().maximize();
+	
+	  driver.get("https://www.demoblaze.com/index.html");
+	  driver.manage().timeouts().implicitlyWait(2000,TimeUnit.MILLISECONDS);
+
+		
+	}
+
+	@When("user should enter username and passwords")
+	public void user_should_enter_username_and_passwords() {
+	
+		driver.findElement(By.id("login2")).click();
+		driver.findElement(By.id("loginusername")).sendKeys("Sanjay027");
+		driver.findElement(By.id("loginpassword")).sendKeys("Sanjay@027");
+		driver.findElement(By.xpath("(//*[@class='btn btn-primary'])[3]")).click();
+		
+		
+	}
+
+	@When("user should click the login buttons")
+	public void user_should_click_the_login_buttons() throws InterruptedException {
+		
+		Thread.sleep(2000);
+		
+	  WebElement samsung = driver.findElement(By.xpath("(//a[@class='hrefch'])[1]"));
+	  samsung.click();
+	  
+	  WebElement add = driver.findElement(By.xpath("//a[@class='btn btn-success btn-lg']"));
+	  add.click();
+	  Thread.sleep(2000);
+	  driver.switchTo().alert().accept();
+	  
+	  driver.findElement(By.id("cartur")).click();
+	  driver.findElement(By.xpath("//button[@class='btn btn-success']")).click();
+	  
+	  
+	}
+
+
+	@When("user should enter the valid datas")
+	public void user_should_enter_the_valid_datas() {
+	
+		driver.findElement(By.id("name")).sendKeys("sanjay");
+		driver.findElement(By.id("country")).sendKeys("india");
+		driver.findElement(By.id("city")).sendKeys("chenai");
+		driver.findElement(By.id("card")).sendKeys("12345678912345678");
+		driver.findElement(By.id("month")).sendKeys("August");
+		driver.findElement(By.id("year")).sendKeys("2022");
+		driver.findElement(By.className("btn btn-primary")).click();
+		
+		
+	}
+
+	@Then("user should verify the success msg")
+	public void user_should_verify_the_success_msg() {
+	driver.findElement(By.id("lead text-muted ")).getAttribute("value");
+	
+	driver.close();
+		
+		
+	}
+
+
+
+	
+}

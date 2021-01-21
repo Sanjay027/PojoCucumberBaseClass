@@ -1,0 +1,9 @@
+Feature: verify the BlazeDemo details
+
+Scenario: verifying BlazeDemo with valid credentials
+
+Given user is on the BlazeDemo page
+When  user should enter username and passwords
+And   user should click the login button
+And   user should enter the valid data
+Then  user should verify the success meg
